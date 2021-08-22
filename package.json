@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "vercel dev"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +13,8 @@
     "got": "^11.8.2",
     "jsdom": "^17.0.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.12.1"
   }
 }
