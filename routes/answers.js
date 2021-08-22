@@ -23,21 +23,18 @@ router.get('/', async (req, res) => {
             const stars = starsElement.childNodes.length;
 
             const answerElement = row.querySelector("td a");
-            const answer = {
-                word: answerElement.innerHTML,
-                link: answerElement.getAttribute("href")
-            }
+            const word = answerElement.innerHTML;
 
             const clue = row.querySelector("td.clue").innerHTML;
 
             results.push({
-                stars, answer, clue
+                stars, word, clue
             })
         });
         res.json({
             title,
             total: results.length,
-            data: results,
+            answers: results,
         })
     } catch (err) {
         throw new Error(err);
