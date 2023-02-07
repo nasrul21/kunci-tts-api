@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
         });
 
         const dom = new JSDOM(html.body);
-        const title = dom.window.document.querySelector("h3 b").innerHTML || "";
+        const title = dom.window.document.querySelector("h2 b").innerHTML || "";
         const results = [];
         const wordList = dom.window.document.querySelectorAll("#wordlists .wp-widget-content tr.odd");
         wordList.forEach(row => {
